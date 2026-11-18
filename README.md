@@ -26,6 +26,7 @@ node scripts/generate_pitch.mjs --brand "Apex Dental" --city "Baner, Pune" --nic
 ## Execution Docs
 
 - [30-Day Execution Playbook](docs/30_DAY_EXECUTION_PLAYBOOK.md)
+- [Day 1 Action Channels](docs/DAY1_TARGET_CHANNELS.md)
 - [Outreach Templates](docs/OUTREACH_TEMPLATES.md)
 - [Payout & Zero-Cost Hosting Checklist](docs/PAYOUT_AND_ONBOARDING_CHECKLIST.md)
 - [SPPU Original Revision Pack Launch Guide](docs/SPPU_STUDY_PACK_LAUNCH.md)
