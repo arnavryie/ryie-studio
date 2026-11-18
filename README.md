@@ -26,6 +26,7 @@ node scripts/generate_pitch.mjs --brand "Apex Dental" --city "Baner, Pune" --nic
 ## Execution Docs
 
 - [30-Day Execution Playbook](docs/30_DAY_EXECUTION_PLAYBOOK.md)
+- [India 2026 Verified Options Research](docs/INDIA_OPTIONS_RESEARCH.md)
 - [Day 1 Action Channels](docs/DAY1_TARGET_CHANNELS.md)
 - [Outreach Templates](docs/OUTREACH_TEMPLATES.md)
 - [Client Scope Confirmation One-Pager](docs/CLIENT_AGREEMENT_TEMPLATE.md)
