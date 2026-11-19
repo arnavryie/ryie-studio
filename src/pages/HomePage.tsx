@@ -273,6 +273,9 @@ export function HomePage() {
             <a href={STUDIO_CONTACT.github} target="_blank" rel="noreferrer" className="hover:text-zinc-200">
               GitHub
             </a>
+            <Link to="/ugc" className="hover:text-zinc-200">
+              Product UGC
+            </Link>
             <Link to="/pitch" className="text-zinc-600 hover:text-cyan-300">
               Outreach Console
             </Link>

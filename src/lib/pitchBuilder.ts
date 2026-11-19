@@ -2,7 +2,13 @@ import type { NicheId } from '../data/niches'
 import type { Currency } from '../data/studio'
 import { buildDemoUrl } from './demoParams'
 
-export type OutreachChannel = 'whatsapp' | 'email' | 'x_dm' | 'reddit_upwork'
+export type OutreachChannel =
+  | 'whatsapp'
+  | 'email'
+  | 'x_dm'
+  | 'reddit_upwork'
+  | 'agency_whitelabel'
+  | 'saas_ugc'
 
 export interface PitchInput {
   niche: NicheId
@@ -118,5 +124,47 @@ export function buildOutreachPitch(input: PitchInput): GeneratedPitch {
           `Scope like this ships in 3–7 days at a fixed ${offerPrice} with daily staging links. Let me know your exact requirements and I can start today.`,
         ].join('\n'),
       }
+
+    case 'agency_whitelabel': {
+      const rate = input.currency === 'USD' ? '$18–$25/hr or $400–$700/sprint' : '₹15,000–₹35,000/sprint'
+      return {
+        demoUrl,
+        offerPrice: rate,
+        subject: `Overflow Next.js / FastAPI / AI dev support for ${brand}`,
+        body: [
+          `${greeting},`,
+          '',
+          `Saw ${brand}'s client work${city ? ` (${city})` : ''} and wanted to keep this direct: if you ever run into dev overflow on client Next.js, React, FastAPI, or AI chatbot/workflow sprints, I handle clean white-label builds end-to-end.`,
+          '',
+          'Live shipped work (solo):',
+          '- Studio & fixed-scope sprint workflow: https://ryie-studio.vercel.app',
+          '- Multi-agent SaaS (Next.js + Supabase + Payments): https://agentearn-ai.vercel.app',
+          '- Interactive client preview engine example: ' + demoUrl,
+          '',
+          `Turnaround is 3–7 days with daily staging deploys (${rate}). Happy to knock out one small test ticket first if you have backlog right now.`,
+          '',
+          '— Arnav Tagade (officialarnav4@gmail.com)',
+        ].join('\n'),
+      }
+    }
+
+    case 'saas_ugc': {
+      const ugcRate = input.currency === 'USD' ? '$75/reel ($190 for 3 hooks)' : '₹3,500/reel (₹9,000 for 3 hooks)'
+      const ugcPortfolioUrl = `${input.origin.replace(/\/+$/, '')}/ugc`
+      return {
+        demoUrl: ugcPortfolioUrl,
+        offerPrice: ugcRate,
+        subject: `45s product demo Reels for ${brand}`,
+        body: [
+          `${greeting},`,
+          '',
+          `I build full-stack AI/Next.js apps myself, and I also shoot crisp 30–45s screen + face product walkthrough Reels for ${brand}-style software launches (${pain}).`,
+          '',
+          `Because I write the stack daily, I don't need hand-holding on UI flows, APIs, or AI prompts. Samples & format details: ${ugcPortfolioUrl}`,
+          '',
+          `Flat ${ugcRate} — 48h delivery with raw 9:16 cuts ready for X, Reels, and Meta/YT ads. Want me to script 2 hook ideas for ${brand}?`,
+        ].join('\n'),
+      }
+    }
   }
 }

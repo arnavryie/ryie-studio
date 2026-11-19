@@ -59,6 +59,24 @@ const QUICK_PRESETS: {
     currency: 'USD',
     channel: 'x_dm',
   },
+  {
+    label: 'Boutique Dev Agency',
+    niche: 'saas',
+    brand: 'Northstar Digital Studio',
+    city: 'Austin / London',
+    painPoint: 'Next.js, FastAPI, and AI chatbot client overflow',
+    currency: 'USD',
+    channel: 'agency_whitelabel',
+  },
+  {
+    label: 'AI SaaS UGC Deal',
+    niche: 'saas',
+    brand: 'CodePilot Labs',
+    city: 'Remote',
+    painPoint: '45s launch demo hooks for X & Reels',
+    currency: 'USD',
+    channel: 'saas_ugc',
+  },
 ]
 
 function loadPipeline(): PipelineItem[] {
@@ -304,7 +322,9 @@ export function PitchPage() {
                   <option value="whatsapp">WhatsApp (Local India)</option>
                   <option value="email">Cold Email</option>
                   <option value="x_dm">X / Twitter DM</option>
-                  <option value="reddit_upwork">Reddit / Upwork / Contra</option>
+                  <option value="reddit_upwork">Reddit / Contra</option>
+                  <option value="agency_whitelabel">Agency White-Label (LinkedIn/Email)</option>
+                  <option value="saas_ugc">SaaS / AI Product UGC Pitch</option>
                 </select>
               </div>
 

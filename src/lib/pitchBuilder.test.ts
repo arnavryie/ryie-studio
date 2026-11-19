@@ -47,4 +47,28 @@ describe('buildOutreachPitch', () => {
     expect(emailPitch.subject).toBe('Built a live preview for BrewHouse')
     expect(emailPitch.body).toContain('officialarnav4@gmail.com')
   })
+
+  it('builds an agency white-label pitch and SaaS UGC pitch linking /ugc', () => {
+    const agencyPitch = buildOutreachPitch({
+      niche: 'saas',
+      brand: 'Northstar Agency',
+      city: 'London',
+      currency: 'USD',
+      channel: 'agency_whitelabel',
+      origin: 'https://ryie-studio.vercel.app',
+    })
+    expect(agencyPitch.subject).toContain('Northstar Agency')
+    expect(agencyPitch.body).toContain('white-label')
+
+    const ugcPitch = buildOutreachPitch({
+      niche: 'saas',
+      brand: 'CodePilot',
+      city: 'Remote',
+      currency: 'INR',
+      channel: 'saas_ugc',
+      origin: 'https://ryie-studio.vercel.app',
+    })
+    expect(ugcPitch.demoUrl).toBe('https://ryie-studio.vercel.app/ugc')
+    expect(ugcPitch.body).toContain('₹3,500/reel')
+  })
 })

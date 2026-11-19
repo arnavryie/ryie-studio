@@ -6,7 +6,8 @@ Full-stack web, AI lead desk, and MVP sprint storefront paired with an instant *
 
 - `/` — Client-facing Studio page (INR/USD toggle, verified live deployments, fixed-scope sprint tiers, workflow)
 - `/demo/:niche` — Live interactive industry previews (`clinic`, `fitness`, `cafe`, `saas`) customizable via URL query parameters (`?brand=...&city=...&offer=...&tagline=...&accent=...`)
-- `/pitch` — Outreach copy generator (WhatsApp, Cold Email, X DM, Reddit/Upwork) + local pipeline tracker toward ₹80,000
+- `/ugc` — Developer-led SaaS & AI Product Demo Reels (UGC) service page
+- `/pitch` — Outreach copy generator (WhatsApp, Cold Email, X DM, Reddit/Contra, Agency White-Label, SaaS UGC) + local pipeline tracker toward ₹80,000
 
 ## Local Development & Verification
 
@@ -25,6 +26,8 @@ node scripts/generate_pitch.mjs --brand "Apex Dental" --city "Baner, Pune" --nic
 
 ## Execution Docs
 
+- [Today's 90-Minute Action Sheet (Nov 19)](docs/TODAY_NOV19_ACTION_SHEET.md)
+- [Agency White-Label & SaaS UGC Playbook](docs/AGENCY_AND_UGC_PLAYBOOK.md)
 - [30-Day Execution Playbook](docs/30_DAY_EXECUTION_PLAYBOOK.md)
 - [India 2026 Verified Options Research](docs/INDIA_OPTIONS_RESEARCH.md)
 - [Day 1 Action Channels](docs/DAY1_TARGET_CHANNELS.md)
